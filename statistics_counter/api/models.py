@@ -2,9 +2,9 @@ from django.db import models
 
 
 class Statistics(models.Model):
-    date = models.DateTimeField(
+    """Класс счётчиков статистики."""
+    date = models.DateField(
         verbose_name='дата события',
-        auto_now_add=True,
     )
     views = models.IntegerField(
         verbose_name='количество показов',
@@ -21,3 +21,7 @@ class Statistics(models.Model):
         blank=True,
         null=True,
     )
+
+    @property  # попробовать решить проблему вычисления данных на лету вот так.
+    def get_cpc(self):
+        pass
