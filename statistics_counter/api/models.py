@@ -1,5 +1,7 @@
 from django.db import models
 
+from api.validators import validate_value
+
 
 class Statistics(models.Model):
     """Класс счётчиков статистики."""
@@ -10,18 +12,17 @@ class Statistics(models.Model):
         verbose_name='количество показов',
         blank=True,
         null=True,
+        validators=(validate_value,),
     )
     clicks = models.IntegerField(
         verbose_name='количество кликов',
         blank=True,
         null=True,
+        validators=(validate_value,),
     )
     cost = models.FloatField(
         verbose_name='стоимость кликов',
         blank=True,
         null=True,
+        validators=(validate_value,),
     )
-
-    @property  # попробовать решить проблему вычисления данных на лету вот так.
-    def get_cpc(self):
-        pass
