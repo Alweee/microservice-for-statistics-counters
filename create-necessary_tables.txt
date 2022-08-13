@@ -1,0 +1,8 @@
+CREATE TABLE `api_statistics` (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `date` date NOT NULL,
+  `views` int DEFAULT NULL,
+  `clicks` int DEFAULT NULL,
+  `cost` double DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
