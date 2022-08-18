@@ -1,6 +1,7 @@
 from datetime import datetime
 
 from rest_framework import serializers
+
 from django.forms import ValidationError
 
 from api.models import Statistics
@@ -12,7 +13,7 @@ class StatisticsSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Statistics
-        fields = ('date', 'views', 'clicks', 'cost', 'cpc', 'cpm',)
+        fields = ('id', 'date', 'views', 'clicks', 'cost', 'cpc', 'cpm',)
 
     def get_cpc(self, obj):
         if (obj.cost and obj.clicks) is None:
