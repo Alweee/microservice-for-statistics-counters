@@ -73,6 +73,7 @@ python manage.py runserver
 
 ## Примеры запросов:
 Метод сохранения статистики: api/v1/statisitcs/
+
 Ввод:
 ```
 {
