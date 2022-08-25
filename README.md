@@ -8,6 +8,7 @@
 * drf-yasg==1.21.3
 * django-filter==22.1
 * python-dotenv-0.20.0
+* unittests
 
 ### Как запустить проект:
 
