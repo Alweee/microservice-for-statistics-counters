@@ -97,3 +97,4 @@ python manage.py runserver
     "cpm": 428.89
 }
 ```
+[Александр Воробьёв](https://github.com/Alweee/)
