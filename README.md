@@ -1,58 +1,53 @@
-# microservice-for-statistics-counters
-Простой микросервис для счетчиков статистики на REST API.
+# Microservice for statistics counters
 
-### Список некоторых используемых технологий/пакетов:
-* djangorestframework==3.13.1
-* flake8==5.0.4
-* mysqlclient==2.1.0
-* drf-yasg==1.21.3
-* django-filter==22.1
-* python-dotenv-0.20.0
-* unittests
+### Описание:
+Микросервис для счетчиков статистики. Сервис умеет взаимодействовать с клиентом при помощи REST API запросов. Также реализована валидация входных данных.
+
+### Cтек технологий:
+[![Python](https://img.shields.io/badge/-Python-464646?style=flat&logo=Python&logoColor=56C0C0&color=008080)](https://www.python.org/)
+[![Django](https://img.shields.io/badge/-Django-464646?style=flat&logo=Django&logoColor=56C0C0&color=008080)](https://www.djangoproject.com/)
+[![Django REST Framework](https://img.shields.io/badge/-Django%20REST%20Framework-464646?style=flat&logo=Django%20REST%20Framework&logoColor=56C0C0&color=008080)](https://www.django-rest-framework.org/)
+[![Django REST Framework](https://img.shields.io/badge/MySQL-%20-008080)](https://www.mysql.com/)
+[![](https://img.shields.io/badge/Unit--tests-%20-008080)](https://docs.djangoproject.com/en/4.1/topics/testing/overview/)
+[![](https://img.shields.io/badge/drf__yasg-%20-008080)](https://drf-yasg.readthedocs.io/en/stable/)
+[![](https://img.shields.io/badge/django__filters-%20-008080)](https://django-filter.readthedocs.io/en/stable/guide/usage.html)
+
+### Шаблон наполнения `.env` файла:
+- DB_ENGINE=db_engine
+- DB_NAME=db_name
+- USER=user
+- PASSWORD=password
+- DB_HOST=db_host
+- DB_PORT=db_port
+- SECRET_KEY=secret_key
 
 ### Как запустить проект:
 
-Клонировать репозиторий и перейти в него в командной строке:
+**Клонировать репозиторий и перейти в него в командной строке:**
 
-```
-https://github.com/Alweee/microservice-for-statistics-counters.git
-```
+`https://github.com/Alweee/microservice-for-statistics-counters.git`
 
-```
-cd statistics_counter
-```
+`cd statistics_counter`
 
-Cоздать и активировать виртуальное окружение:
+**Cоздать и активировать виртуальное окружение:**
 
-```
-python -m venv venv
-```
+`python -m venv venv`
 
-```
-source venv/bin/activate
-```
+`source venv/bin/activate`
 
-Установить зависимости из файла requirements.txt:
+**Установить зависимости из файла requirements.txt:**
 
-```
-python -m pip install --upgrade pip
-```
+`python -m pip install --upgrade pip`
 
-```
-pip install -r requirements.txt
-```
+**pip install -r requirements.txt**
 
-Выполнить миграции:
+**Выполнить миграции:**
 
-```
-python3 manage.py migrate
-```
+`python3 manage.py migrate`
 
-Запустить проект:
+**Запустить проект:**
 
-```
-python manage.py runserver
-```
+`python manage.py runserver`
 
 ## API методы:
 - Метод сохранения статистики
@@ -72,10 +67,13 @@ python manage.py runserver
 - **cpc** = cost/clicks (средняя стоимость клика)
 - **cpm** = cost/views * 1000 (средняя стоимость 1000 показов)
 
-## Примеры запросов:
-Метод сохранения статистики: `api/v1/statisitcs/`
+## Метод сброса статистики
+Удаляет всю сохраненную статистику.
 
-Ввод:
+## Примеры запросов:
+**`POST` | Метод сохранения статистики: `/api/v1/statisitcs/`**
+
+Request:
 ```
 {
     "date": "2019-08-24",
@@ -85,7 +83,7 @@ python manage.py runserver
 }
 ```
 
-Вывод:
+Response:
 ```
 {
     "id": 32,
