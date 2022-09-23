@@ -7,7 +7,9 @@
 [![Python](https://img.shields.io/badge/-Python-464646?style=flat&logo=Python&logoColor=56C0C0&color=008080)](https://www.python.org/)
 [![Django](https://img.shields.io/badge/-Django-464646?style=flat&logo=Django&logoColor=56C0C0&color=008080)](https://www.djangoproject.com/)
 [![Django REST Framework](https://img.shields.io/badge/-Django%20REST%20Framework-464646?style=flat&logo=Django%20REST%20Framework&logoColor=56C0C0&color=008080)](https://www.django-rest-framework.org/)
-[![Django REST Framework](https://img.shields.io/badge/MySQL-%20-008080)](https://www.mysql.com/)
+[![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-464646?style=flat&logo=PostgreSQL&logoColor=56C0C0&color=008080)](https://www.postgresql.org/)
+[![Docker](https://img.shields.io/badge/-Docker-464646?style=flat&logo=Docker&logoColor=56C0C0&color=008080)](https://www.docker.com/)
+[![Docker-compose](https://img.shields.io/badge/-Docker%20compose-464646?style=flat&logo=Docker&logoColor=56C0C0&color=008080)](https://www.docker.com/)
 [![](https://img.shields.io/badge/Unit--tests-%20-008080)](https://docs.djangoproject.com/en/4.1/topics/testing/overview/)
 [![](https://img.shields.io/badge/drf__yasg-%20-008080)](https://drf-yasg.readthedocs.io/en/stable/)
 [![](https://img.shields.io/badge/django__filters-%20-008080)](https://django-filter.readthedocs.io/en/stable/guide/usage.html)
@@ -15,8 +17,8 @@
 ### Шаблон наполнения `.env` файла:
 - DB_ENGINE=db_engine
 - DB_NAME=db_name
-- USER=user
-- PASSWORD=password
+- POSTGRES_USER=user
+- POSTGRES_PASSWORD=password
 - DB_HOST=db_host
 - DB_PORT=db_port
 - SECRET_KEY=secret_key
